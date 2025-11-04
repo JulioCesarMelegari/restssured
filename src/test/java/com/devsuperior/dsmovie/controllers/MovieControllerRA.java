@@ -2,17 +2,14 @@ package com.devsuperior.dsmovie.controllers;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.is;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.hasItem;
-
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -50,7 +47,7 @@ public class MovieControllerRA {
 		
 		postMovieInstance = new HashMap<>();
 		postMovieInstance.put("title", "Test Movie");
-		postMovieInstance.put("score", 6.5);
+		postMovieInstance.put("score", 4.5);
 		postMovieInstance.put("count", 0);
 		postMovieInstance.put("image", "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg");
 			
